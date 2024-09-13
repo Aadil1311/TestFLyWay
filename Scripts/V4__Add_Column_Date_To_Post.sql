@@ -1,0 +1,2 @@
+ALTER TABLE posts
+ADD created_at DATETIME DEFAULT GETDATE(); 
