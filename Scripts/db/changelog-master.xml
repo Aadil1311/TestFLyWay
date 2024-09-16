@@ -1,0 +1,54 @@
+<!-- db/changelog/changelog-master.xml -->
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="1" author="Adil">
+        <createTable tableName="userss">
+            <column name="id" type="int" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="name" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="email" type="varchar(255)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+   <!-- New changeset for adding a column -->
+    <changeSet id="2" author="Adil">
+        <addColumn tableName="userss">
+            <column name="Add" type="varchar(255)">
+                <constraints nullable="true"/>
+            </column>
+        </addColumn>
+    </changeSet>
+
+
+   <!-- New changeset for adding a column -->
+    <changeSet id="3" author="Adil">
+        <addColumn tableName="userss">
+            <column name="Address" type="varchar(255)">
+                <constraints nullable="true"/>
+            </column>
+        </addColumn>
+    </changeSet>
+
+   <!-- New changeset for adding a column -->
+    <changeSet id="4" author="Adil">
+    <sql>
+	Alter table userss drop  column Address
+    </sql>
+    </changeSet>
+
+     <!-- Updated changeset for adding columns -->
+    <changeSet id="5" author="Adil">
+    <sql>
+	Alter table userss Add Address Varchar(50)
+    </sql>
+    </changeSet>
+</databaseChangeLog>
