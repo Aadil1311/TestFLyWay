@@ -51,4 +51,11 @@
 	Alter table userss Add Address Varchar(50)
     </sql>
     </changeSet>
+
+ <!-- Updated changeset for adding columns -->
+    <changeSet id="6" author="Adil">
+    <sql>
+	Alter table userss Add Surname Varchar(50)
+    </sql>
+    </changeSet>
 </databaseChangeLog>
