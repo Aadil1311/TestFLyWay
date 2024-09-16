@@ -60,7 +60,7 @@
     </changeSet>
 
  <!-- Updated changeset for adding columns -->
-    <changeSet id="6" author="Adil">
+    <changeSet id="7" author="Adil">
     <sql>
 	Alter table userss Add Petname Varchar(50)
     </sql>
